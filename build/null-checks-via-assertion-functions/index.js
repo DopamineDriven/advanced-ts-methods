@@ -11,5 +11,4 @@ const root = document.getElementById('root');
 assertIsNonNullish(root, "Couldn't find DOM element #root");
 root.addEventListener('click', e => {
     e.preventDefault();
-    console.log;
 });

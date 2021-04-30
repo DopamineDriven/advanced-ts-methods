@@ -43,11 +43,11 @@ function createGetterObject(obj) {
     }
     return newObj;
 }
-const userNuevo = createGetterObject({
+const userNuevo = Object.freeze(createGetterObject({
     id: 3111992,
     name: 'Andrew Ross',
     twitter: '@DopamineDriven'
-});
+}));
 function serializeToJSON(value, options) {
     var _a, _b;
     const Indent = (_b = (_a = options === null || options === void 0 ? void 0 : options.formatting) === null || _a === void 0 ? void 0 : _a.indent) !== null && _b !== void 0 ? _b : 2;

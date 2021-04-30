@@ -87,11 +87,13 @@ type PropGetters<TObj extends Record<string, any>> = {
 	[TKey in string & keyof TObj as `get${Capitalize<TKey>}`]: () => TObj[TKey];
 };
 
-const userNuevo = createGetterObject({
-	id: 3111992,
-	name: 'Andrew Ross',
-	twitter: '@DopamineDriven'
-});
+const userNuevo = Object.freeze(
+	createGetterObject({
+		id: 3111992,
+		name: 'Andrew Ross',
+		twitter: '@DopamineDriven'
+	} as const)
+);
 type serializationOption = {
 	formatting?: {
 		indent?: number;
@@ -104,18 +106,17 @@ function serializeToJSON(value: any, options?: serializationOption) {
 }
 
 const userObj = {
-    id: userNuevo.getId(),
-    name: userNuevo.getName(),
-    twitter: userNuevo.getTwitter()
-}
+	id: userNuevo.getId(),
+	name: userNuevo.getName(),
+	twitter: userNuevo.getTwitter()
+};
 
 const getterToJSON = serializeToJSON(userObj, {
-    formatting: {
-        indent: 4
-    }
-})
-console.log(getterToJSON)
-
+	formatting: {
+		indent: 4
+	}
+});
+console.log(getterToJSON);
 
 // mapped type
 // return value is an indexed access type

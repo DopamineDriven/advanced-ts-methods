@@ -4,7 +4,7 @@
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
-		"compiled": "node build/statically-typed-string-literals",
+		"compiled": "node build/mapped-template-literal-types",
 		"compile": "tsc",
 		"compile:run": "yarn compile && yarn compiled"
 	},

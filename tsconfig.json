@@ -10,7 +10,7 @@
 		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
 		"strict": true,
-    "removeComments": false,
+		"removeComments": false,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"downlevelIteration": true,
@@ -33,6 +33,7 @@
 			"@/initialize-class-instance-properties/*": [
 				"initialize-class-instance-properties/*"
 			],
+			"@/mapped-template-literal-types/*": ["mapped-template-literal-types/*"],
 			"@/nonnullish-t-conditional-types/*": [
 				"nonnullish-t-conditional-types/*"
 			],
