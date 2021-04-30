@@ -10,6 +10,7 @@
 		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
 		"strict": true,
+    "removeComments": false,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"downlevelIteration": true,
@@ -17,7 +18,7 @@
 		"jsx": "preserve",
 		"outDir": "./build",
 		"paths": {
-      "@/conditional-return-typeof-t/*": ["conditional-return-typeof-t/*"],
+			"@/conditional-return-typeof-t/*": ["conditional-return-typeof-t/*"],
 			"@/const-assertion-array-literals/*": [
 				"const-assertion-array-literals/*"
 			],
@@ -32,13 +33,18 @@
 			"@/initialize-class-instance-properties/*": [
 				"initialize-class-instance-properties/*"
 			],
-      "@/nonnullish-t-conditional-types/*": ["nonnullish-t-conditional-types/*"],
+			"@/nonnullish-t-conditional-types/*": [
+				"nonnullish-t-conditional-types/*"
+			],
 			"@/null-checks-via-assertion-functions": [
 				"null-checks-via-assertion-functions/*"
 			],
 			"@/nullish-coalescing/*": ["nullish-coalescing/*"],
 			"@/optional-chaining/*": ["optional-chaining/*"],
 			"@/private-fields-via-modifier/*": ["private-fields-via-modifier/*"],
+			"@/statically-typed-string-literals/*": [
+				"statically-typed-string-literals/*"
+			],
 			"@/statically-unknown-vals-types/*": ["statically-unknown-vals-types/*"],
 			"@/truly-private-class-fields/*": ["truly-private-class-fields/*"],
 			"@/type-enum-style-objects/*": ["type-enum-style-objects/*"],
