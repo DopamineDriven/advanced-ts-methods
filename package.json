@@ -1,0 +1,16 @@
+{
+	"name": "static-types",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"compiled": "node build/conditional-return-typeof-t",
+		"compile": "tsc",
+		"compile:run": "yarn compile && yarn compiled"
+	},
+	"devDependencies": {
+		"@types/node": "^15.0.1",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4"
+	}
+}

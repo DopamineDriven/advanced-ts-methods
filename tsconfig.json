@@ -1,0 +1,50 @@
+{
+	"compilerOptions": {
+		"allowJs": false,
+		"target": "ES6",
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"strictPropertyInitialization": true,
+		"strictNullChecks": true,
+		"allowSyntheticDefaultImports": true,
+		"alwaysStrict": true,
+		"strict": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"downlevelIteration": true,
+		"baseUrl": ".",
+		"jsx": "preserve",
+		"outDir": "./build",
+		"paths": {
+      "@/conditional-return-typeof-t/*": ["conditional-return-typeof-t/*"],
+			"@/const-assertion-array-literals/*": [
+				"const-assertion-array-literals/*"
+			],
+			"@/const-assertion-object-literals/*": [
+				"const-assertion-object-literals/*"
+			],
+			"@/declare-read-only-array-types/*": ["declare-read-only-array-types/*"],
+			"@/declare-read-only-tuple-types/*": ["declare-read-only-tuple-types/*"],
+			"@/encapsulate-truly-private-vars-in-a-closure/*": [
+				"encapsulate-truly-private-vars-in-a-closure/*"
+			],
+			"@/initialize-class-instance-properties/*": [
+				"initialize-class-instance-properties/*"
+			],
+      "@/nonnullish-t-conditional-types/*": ["nonnullish-t-conditional-types/*"],
+			"@/null-checks-via-assertion-functions": [
+				"null-checks-via-assertion-functions/*"
+			],
+			"@/nullish-coalescing/*": ["nullish-coalescing/*"],
+			"@/optional-chaining/*": ["optional-chaining/*"],
+			"@/private-fields-via-modifier/*": ["private-fields-via-modifier/*"],
+			"@/statically-unknown-vals-types/*": ["statically-unknown-vals-types/*"],
+			"@/truly-private-class-fields/*": ["truly-private-class-fields/*"],
+			"@/type-enum-style-objects/*": ["type-enum-style-objects/*"],
+			"@/unknown-type-assertions/*": ["unknown-type-assertions/*"]
+		}
+	},
+	"include": ["**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
+	"exclude": ["node_modules", "build"]
+}
