@@ -1,0 +1,18 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "/build",
+        "module": "esnext",
+        "target": "es5",
+        "moduleResolution": "node",
+    },
+    "include":[
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+    ],
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}

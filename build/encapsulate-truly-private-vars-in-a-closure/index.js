@@ -18,3 +18,4 @@ count.increment();
 console.log(count.count);
 // local var value inaccessible outside of createCounter function
 // however, the compiled code doesn't hide our private vars nearly as well
+//# sourceMappingURL=index.js.map

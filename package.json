@@ -6,7 +6,8 @@
 	"scripts": {
 		"compiled": "node build/mapped-template-literal-types",
 		"compile": "tsc",
-		"compile:run": "yarn compile && yarn compiled"
+		"compile:run": "yarn compile && yarn compiled",
+		"build": "tsc --build tsconfig.json"
 	},
 	"devDependencies": {
 		"@types/node": "^15.0.1",

@@ -20,3 +20,4 @@ function rangeFunc(from, to) {
     return values;
 }
 console.log(rangeFunc(-10, 10));
+//# sourceMappingURL=index.js.map

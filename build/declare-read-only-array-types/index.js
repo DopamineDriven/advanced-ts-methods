@@ -14,3 +14,4 @@ const values = ['booksyA', 'booksyB', 'booksyC'];
 const valuesWithSeparators = intersperse(values, 'Google');
 console.log(values);
 console.log(valuesWithSeparators);
+//# sourceMappingURL=index.js.map

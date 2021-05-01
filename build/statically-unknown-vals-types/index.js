@@ -28,3 +28,4 @@ const isPrimeNumber = (n) => {
 };
 const acceptor = (num) => [...Array(num !== 0 ? num : 1000).keys()].reverse().filter(isPrimeNumber);
 console.log(acceptor(101));
+//# sourceMappingURL=index.js.map

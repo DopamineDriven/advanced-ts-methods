@@ -14,3 +14,4 @@ const json = serializeJSON(user, {
     }
 });
 console.log(json);
+//# sourceMappingURL=index.js.map

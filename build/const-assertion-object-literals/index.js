@@ -23,3 +23,4 @@
     console.log(ORIGIN);
 }
 // same outcome but much less verbose! &uarr;
+//# sourceMappingURL=index.js.map

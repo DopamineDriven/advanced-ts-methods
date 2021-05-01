@@ -43,3 +43,4 @@ console.log(counter['count']); // returns -97
 // const counterArr = [...Array(counter['count']).keys()];
 // console.log(counterArr.filter(x => x.toLocaleString()));
 // private modifier does not give us privacy at runtime
+//# sourceMappingURL=index.js.map

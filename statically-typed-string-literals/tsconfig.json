@@ -1,0 +1,18 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "/build",
+        "module": "esnext",
+        "target": "ES6",
+        "moduleResolution": "node",
+    },
+    "include":[
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.js",
+    ],
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}

@@ -26,49 +26,46 @@ type MarginDeclartion = [MarginProperty, MarginValue];
 const margin: MarginDeclartion = ['margin-block-start', `16em`];
 
 // ----------------------------------------------------------------------------
-{
-	function createGetterObject(obj: any): any {
-		const newObj: any = {};
-		for (const key of Object.keys(obj)) {
-			const capitalizedKey = key[0].toUpperCase() + key.substr(1);
-			const getterKey = `get${capitalizedKey}`;
-			newObj[getterKey] = () => obj[key];
-		}
-		return newObj;
-	}
 
-	const userNuevo = createGetterObject({
-		name: 'Andrew Ross',
-		twitter: '@DopamineDriven'
-	});
+function createGetterObjectTwo(obj: any): any {
+	const newObj: any = {};
+	for (const key of Object.keys(obj)) {
+		const capitalizedKey = key[0].toUpperCase() + key.substr(1);
+		const getterKey = `get${capitalizedKey}`;
+		newObj[getterKey] = () => obj[key];
+	}
+	return newObj;
 }
+
+const nuevoUser = createGetterObjectTwo({
+	name: 'Andrew Ross',
+	twitter: '@DopamineDriven'
+});
 
 // statically describe the above with TS
 
-{
-	function createGetterObject<TObj extends Record<string, any>>(
-		obj: TObj
-	): PropGetters<TObj> {
-		const newObj: any = {};
-		for (const key of Object.keys(obj)) {
-			const capitalizedKey = key[0].toUpperCase() + key.substr(1);
-			const getterKey = `get${capitalizedKey}`;
-			// extends Record<string, any> added to resolve obj[key] error
-			newObj[getterKey] = () => obj[key];
-		}
-		return newObj;
+function createGetterObjectOne<TObj extends Record<string, any>>(
+	obj: TObj
+): PropGets<TObj> {
+	const newObj: any = {};
+	for (const key of Object.keys(obj)) {
+		const capitalizedKey = key[0].toUpperCase() + key.substr(1);
+		const getterKey = `get${capitalizedKey}`;
+		// extends Record<string, any> added to resolve obj[key] error
+		newObj[getterKey] = () => obj[key];
 	}
-	// mapped type
-	type PropGetters<TObj> = {
-		// return value is an indexed access type
-		// looking up property named TKey in TObj!
-		[TKey in keyof TObj]: () => TObj[TKey];
-	};
-	const userNuevo = createGetterObject({
-		name: 'Andrew Ross',
-		twitter: '@DopamineDriven'
-	});
+	return newObj;
 }
+// mapped type
+type PropGets<TObj> = {
+	// return value is an indexed access type
+	// looking up property named TKey in TObj!
+	[TKey in keyof TObj]: () => TObj[TKey];
+};
+const useNuevo = createGetterObjectOne({
+	name: 'Andrew Ross',
+	twitter: '@DopamineDriven'
+});
 
 function createGetterObject<TObj extends Record<string, any>>(
 	obj: TObj

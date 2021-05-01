@@ -81,3 +81,4 @@ function swap(tuple) {
      * same type as the previous, but is frozen during runtime too!
      */
 }
+//# sourceMappingURL=index.js.map

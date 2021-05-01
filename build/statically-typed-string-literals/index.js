@@ -1,38 +1,34 @@
 "use strict";
 const margin = ['margin-block-start', `16em`];
 // ----------------------------------------------------------------------------
-{
-    function createGetterObject(obj) {
-        const newObj = {};
-        for (const key of Object.keys(obj)) {
-            const capitalizedKey = key[0].toUpperCase() + key.substr(1);
-            const getterKey = `get${capitalizedKey}`;
-            newObj[getterKey] = () => obj[key];
-        }
-        return newObj;
+function createGetterObjectTwo(obj) {
+    const newObj = {};
+    for (const key of Object.keys(obj)) {
+        const capitalizedKey = key[0].toUpperCase() + key.substr(1);
+        const getterKey = `get${capitalizedKey}`;
+        newObj[getterKey] = () => obj[key];
     }
-    const userNuevo = createGetterObject({
-        name: 'Andrew Ross',
-        twitter: '@DopamineDriven'
-    });
+    return newObj;
 }
+const nuevoUser = createGetterObjectTwo({
+    name: 'Andrew Ross',
+    twitter: '@DopamineDriven'
+});
 // statically describe the above with TS
-{
-    function createGetterObject(obj) {
-        const newObj = {};
-        for (const key of Object.keys(obj)) {
-            const capitalizedKey = key[0].toUpperCase() + key.substr(1);
-            const getterKey = `get${capitalizedKey}`;
-            // extends Record<string, any> added to resolve obj[key] error
-            newObj[getterKey] = () => obj[key];
-        }
-        return newObj;
+function createGetterObjectOne(obj) {
+    const newObj = {};
+    for (const key of Object.keys(obj)) {
+        const capitalizedKey = key[0].toUpperCase() + key.substr(1);
+        const getterKey = `get${capitalizedKey}`;
+        // extends Record<string, any> added to resolve obj[key] error
+        newObj[getterKey] = () => obj[key];
     }
-    const userNuevo = createGetterObject({
-        name: 'Andrew Ross',
-        twitter: '@DopamineDriven'
-    });
+    return newObj;
 }
+const useNuevo = createGetterObjectOne({
+    name: 'Andrew Ross',
+    twitter: '@DopamineDriven'
+});
 function createGetterObject(obj) {
     const newObj = {};
     for (const key of Object.keys(obj)) {
@@ -71,3 +67,4 @@ console.log(getterToJSON);
 // NOTE - IMPORTANT - The " = intrinsic" implies that we cannot write this type ourselves -- it is performed in the compiler
 // type Capitalize<S extends string> = intrinsic
 // use Capitalize Utility type to capitalize TKey as defined in the function
+//# sourceMappingURL=index.js.map

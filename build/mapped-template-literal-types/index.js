@@ -33,3 +33,4 @@ const jsonGetter = serializeJson(andrewObj, {
     }
 });
 console.log(jsonGetter);
+//# sourceMappingURL=index.js.map

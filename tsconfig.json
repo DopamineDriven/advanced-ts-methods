@@ -1,11 +1,12 @@
 {
 	"compilerOptions": {
 		"allowJs": false,
-		"target": "ES6",
-		"lib": ["DOM", "DOM.Iterable", "ESNext"],
-		"module": "esnext",
+		"lib": ["DOM", "DOM.Iterable", "ESNext", "ES2019", "ES6", "ES2020.String"],
 		"moduleResolution": "node",
+    "target": "es6",
+    "module": "ESNext",
 		"strictPropertyInitialization": true,
+    "sourceMap": true,
 		"strictNullChecks": true,
 		"allowSyntheticDefaultImports": true,
 		"alwaysStrict": true,
@@ -52,6 +53,4 @@
 			"@/unknown-type-assertions/*": ["unknown-type-assertions/*"]
 		}
 	},
-	"include": ["**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],
-	"exclude": ["node_modules", "build"]
 }

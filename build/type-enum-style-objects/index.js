@@ -19,3 +19,4 @@ function FetchJSON(url, method) {
     });
 }
 // FetchJSON('https://example.com/', HTTPRequestMethod.GET).then(data => {});
+//# sourceMappingURL=index.js.map
